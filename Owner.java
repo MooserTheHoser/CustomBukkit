@@ -20,8 +20,10 @@ public class Owner implements CommandExecutor {
             p.sendMessage(isPlayerOwner); //debugging
             if (isPlayerOwner.equals("yes")) {
                 Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "lp user " + p.getName() + " parent remove owner");
+                p.sendMessage(ChatColor.GOLD + "Removing owner privledges");
             } else {
                 Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "lp user " + p.getName() + " parent add owner");
+                p.sendMessage(ChatColor.GREEN + "Giving owner privledges");
             }
         } else {
             p.sendMessage(ChatColor.RED + "You do not have permission!");
